@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Driver Emergency Support</title>
+
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="driver interface.css">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body>
+  <div class="left"></div>
+
+  <div class="right">
+    <div class="driver-container">
+      <h2>🚚 Driver Route Assistant</h2>
+      <p class="subtitle">
+        AI-powered route & capacity-aware transport guidance
+      </p>
+
+      <!-- INPUT -->
+      <div class="driver-card">
+        <div class="form-group">
+          <label>From Location</label>
+          <input id="fromCity" placeholder="Pune">
+        </div>
+
+        <div class="form-group">
+          <label>To Location</label>
+          <input id="toCity" placeholder="Nanded">
+        </div>
+
+        <button onclick="getRoute()">Get Best Route</button>
+      </div>
+
+
+      <!-- AI OUTPUT -->
+      <div class="ai-box">
+        <h3>🤖 Route Recommendation</h3>
+        <pre id="result">
+Enter locations and click "Get Best Route".
+                </pre>
+      </div>
+
+      <!-- MAP -->
+      <div class="map-box">
+        <h3>🗺 Route Map & Facilities</h3>
+        <div id="map"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="driver interface.js"></script>
+  <script src="menu.js"></script>
+
+</body>
+
+</html>

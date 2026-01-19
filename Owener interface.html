@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Transporter / Owner Interface</title>
+
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="owner.css">
+</head>
+
+<body>
+
+  <div class="left"></div>
+
+  <div class="right">
+    <div class="owner-container">
+
+      <h2>🏢 Transporter / Owner AI Dashboard</h2>
+      <p class="subtitle">
+        AI-powered insights to optimize fleet utilization and profitability.
+      </p>
+
+      <!-- OWNER INPUT CARD -->
+      <div class="owner-card">
+
+        <div class="form-group">
+          <label>Truck Type</label>
+          <input id="truckType" placeholder="e.g. 16T, 20T, Container">
+        </div>
+
+        <div class="form-group">
+          <label>No. of Trucks</label>
+          <input id="truckCount" type="number">
+        </div>
+
+        <button onclick="addTruck()">➕ Add Truck</button>
+
+        <div class="truck-list" id="truckList"></div>
+
+        <div class="form-group">
+          <label>Current Location</label>
+          <input id="location" placeholder="City">
+        </div>
+
+        <div class="form-group">
+          <label>Truck Status</label>
+          <input id="status" placeholder="Idle / Active">
+        </div>
+
+        <button onclick="analyzeFleet()">🤖 Analyze Fleet</button>
+        <button onclick="analyzeProfit()">📈 Analyze Profit</button>
+      </div>
+
+      <hr>
+
+      <h3>📦 Seasonal Goods AI</h3>
+
+      <select id="seasonSelect">
+        <option value="">Select Season</option>
+        <option>Summer</option>
+        <option>Monsoon</option>
+        <option>Winter</option>
+      </select>
+
+      <button onclick="analyzeGoods()">Analyze Goods</button>
+
+      <pre id="goodsResult">Result will appear here...</pre>
+
+      <div class="ai-box">
+        <h3>🤖 AI Business Decision Support</h3>
+        <pre id="result">AI insights will appear here.</pre>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="menu.js"></script>
+  <script src="owner.js"></script>
+</body>
+
+</html>

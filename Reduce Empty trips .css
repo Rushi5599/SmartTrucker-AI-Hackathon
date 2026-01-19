@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f4f7fb;
+}
+
+.right {
+  margin-left: 20%;
+  width: 80%;
+  padding: 30px;
+}
+
+.decision-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #0a2a66;
+  font-size: 32px;
+}
+
+.subtitle {
+  margin-bottom: 25px;
+  color: #5f6f8c;
+}
+
+.decision-card {
+  background: linear-gradient(135deg, #5fd7df, #9eeff4);
+  padding: 28px;
+  border-radius: 18px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #0a2a66;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 6px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 12px;
+  background: #0a2a66;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.ai-box {
+  margin-top: 30px;
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  border-left: 6px solid #0a2a66;
+}
+
+.ai-box pre {
+  background: #f3f7fb;
+  padding: 15px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+}
+
+.return-box {
+  margin-top: 30px;
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+}
+
+.return-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.return-card {
+  flex: 1;
+  min-width: 220px;
+  background: #e8f9fb;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.saving-box {
+  margin-top: 20px;
+  padding: 14px;
+  background: #e6ffe6;
+  border-left: 6px solid #28a745;
+  border-radius: 10px;
+  font-weight: bold;
+}

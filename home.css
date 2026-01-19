@@ -1,0 +1,650 @@
+/*🏠 Home Section (Dashboard/Stats/Services/etc.)*/
+
+
+/* Layout */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+}
+
+.left {
+  width: 20%;
+  background-color: #fff;
+  min-height: 100vh;
+  border-right: 1px solid #ccc;
+}
+
+.right {
+  margin-left: 20%;   /* This aligns it correctly beside the fixed .left */
+  width: 80%;         /* Ensures it doesn’t overflow */
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  overflow-x: auto;
+  overflow-wrap: break-word;
+}
+
+/* Sections */
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  display: inline-block; /* Shrinks the element to fit the text */
+  margin-bottom: 15px;
+  color: #364c61;
+  border: 1px solid rgba(168, 106, 106, 0.642);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+/* Membership */
+.membership {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ← change this */
+ 
+}
+
+.membership-banner {
+  width: 100%;
+  max-width: 600px;
+  background-color: #f79d3d;
+  display: flex;
+  flex-direction: row; /* ← changed from column to row */
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  gap: 20px; /* adds spacing between image and text */
+}
+
+.user-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+.content h2 {
+  margin: 0 0 5px;
+  font-size: 1.4rem;
+}
+
+.content p {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.content button {
+  background-color: white;
+  color: #f79d3d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.content button:hover {
+  background-color: #fff3e0;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.mmm{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+.stat-box {
+  background-color: #15e6c0c1;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid pink;
+  flex: 1;
+  min-width: 150px;
+}
+
+.stat-box h3 {
+  font-size: 24px;
+  color: #2980b9;
+}
+/*customer css */
+.customer-btn {
+  background-color: white;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+/*Driver css */
+.Driver-btn {
+  background-color: white;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+/*Owner css */
+.owner-btn {
+  background-color: white;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Services */
+.services  {
+  list-style: none;
+  
+  
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+
+/* Actions */
+.actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  background-color: #51759b7c;
+}
+
+.action-card {
+  border: 1px solid #0ba7b9;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #0cc8d6a7;
+}
+
+.action-card h3 {
+  color: #c94a2e;
+}
+
+.action-card .btn {
+  margin-top: 10px;
+  background-color: #005ee3;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.RRR{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+/*profiles*/
+/* Reset + Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Layout: 3 columns */
+.transporter-profile-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.transporter-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 30%;
+  min-width: 280px;
+  box-sizing: border-box;
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.transporter-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.transporter-logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto 15px;
+}
+
+/* Text styling */
+.transporter-name {
+  font-size: 1.3em;
+  text-align: center;
+  margin: 5px 0;
+  color: #2c3e50;
+}
+
+.transporter-info {
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.transporter-rating {
+  text-align: center;
+  font-size: 1.2em;
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.transporter-verification {
+  font-size: 0.85em;
+  text-align: center;
+  color: #444;
+}
+
+.transporter-verification span {
+  font-weight: bold;
+  color: green;
+}
+
+/* Buttons */
+.transporter-button {
+  display: inline-block;
+  background-color: #3469db;
+  color: white;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin: 10px 5px 0;
+  text-align: center;
+}
+
+.transporter-button:hover {
+  background-color: #2a53af;
+}
+
+
+
+/* Cities */
+.city-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-left: 0;
+}
+
+.city-list li {
+  background-color: #0c84704e;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.see-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #3498db;
+  text-decoration: none;
+}
+
+/* Transporters */
+.transporter-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-top: 15px;
+}
+
+.card-actions {
+  margin-top: 10px;
+}
+
+.card-actions .btn {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.call {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn.view {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Truck Types */
+.types-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.types-grid span {
+  background-color: #eee;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+/*TRUST*/
+.containe{
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+      background-color: #4096936d;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .container h1 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    .container p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .horizontal-sections {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .section {
+      background-color: #fafafa;
+      border-radius: 8px;
+      padding: 20px;
+      width: 220px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .section h2 {
+      margin: 0;
+      font-size: 1.4em;
+      color: #333;
+    }
+
+    .section p {
+      margin: 8px 0 0;
+      color: #777;
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 768px) {
+      .horizontal-sections {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* Chatbot */
+#chatbot-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #005ee3;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#chatbot {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 320px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.chat-header {
+  background: #005ee3;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chatMessages {
+  height: 220px;
+  overflow-y: auto;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+.chat-input button {
+  padding: 10px;
+  background: #005ee3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.user-msg {
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+.bot-msg {
+  text-align: left;
+  margin-bottom: 8px;
+  color: #005ee3;
+}
+/* ================================
+   AI DEMAND FORECASTING SECTION
+================================ */
+
+/* Section Wrapper */
+.ai-forecast-section {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+/* Main Card */
+.ai-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #eef2f5;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Header */
+.ai-header h3 {
+  margin: 0 0 16px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0d3b66;
+}
+
+/* Description Text */
+.ai-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Prediction Row */
+.ai-prediction-example {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Route Input Area */
+.route-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.route-info input {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid #dde3e9;
+  background: #f8fafc;
+  min-width: 220px;
+}
+
+.route-info input:focus {
+  outline: none;
+  border-color: #2196f3;
+  background: #ffffff;
+}
+
+/* Analyze Button */
+.ai-check-btn {
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0d3b66, #1e5f99);
+  box-shadow: 0 4px 10px rgba(13, 59, 102, 0.25);
+}
+
+.ai-check-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(13, 59, 102, 0.35);
+}
+
+/* Demand Badge */
+.demand-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.demand-badge.high {
+  background: #28a745;
+}
+
+/* AI Insight Text */
+.ai-insight {
+  margin-top: 12px;
+  padding: 14px;
+  background: #fff8e1;
+  border-radius: 10px;
+  border: 1px dashed #ffb74d;
+  font-size: 0.95rem;
+  color: #8d6e3e;
+  font-style: italic;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .ai-prediction-example {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .route-info input {
+    width: 100%;
+  }
+
+  .ai-check-btn {
+    width: 100%;
+  }
+}

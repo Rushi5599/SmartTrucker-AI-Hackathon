@@ -1,0 +1,126 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+
+/* RIGHT CONTENT */
+.right {
+  margin-left: 20%;
+  width: 80%;
+  padding: 32px;
+  min-height: 100vh;
+}
+
+/* CONTAINER */
+.driver-container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+/* HEADINGS */
+.driver-container h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a2a66;
+}
+
+.subtitle {
+  margin-bottom: 26px;
+  color: #5f6f8c;
+}
+
+/* DRIVER CARD */
+.driver-card {
+  background: linear-gradient(135deg, #5fd7df, #9eeff4);
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+/* FORM */
+.form-group {
+  flex: 1;
+  min-width: 220px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #0a2a66;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+}
+
+/* BUTTON */
+button {
+  padding: 13px 28px;
+  background: linear-gradient(135deg, #0a2a66, #123f91);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(10,42,102,0.35);
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* AI BOX */
+.ai-box {
+  margin-top: 35px;
+  background: white;
+  border-left: 6px solid #0a2a66;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+}
+
+.ai-box h3 {
+  margin-bottom: 10px;
+  color: #0a2a66;
+}
+
+.ai-box pre {
+  background: #f3f7fb;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 14.5px;
+  white-space: pre-wrap;
+}
+
+/* MAP */
+.map-box {
+  margin-top: 35px;
+}
+
+.map-box h3 {
+  margin-bottom: 10px;
+  color: #0a2a66;
+}
+
+#map {
+  height: 400px !important;
+  width: 100%;
+  border-radius: 18px;
+  background: #eaeaea;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.15);
+}

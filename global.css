@@ -1,0 +1,270 @@
+/*🎨 General & Reset Styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  
+  display: flex;
+  min-height: 100vh;
+}
+
+/*📌 Sidebar / Menu (Left Navigation)*/
+.left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100vh;
+  background-color: #0f2a44; /* Professional Transport Blue */
+  border-right: 1px solid rgba(255,255,255,0.1);
+  overflow-y: auto;
+  padding: 20px;
+  color: #ffffff;
+}
+.right-content {
+  margin-left: 260px;    /* EXACT SAME AS SIDEBAR WIDTH */
+  padding: 30px;
+
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+
+
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.logo-container img {
+  width: 50px;
+  height: auto;
+}
+
+.logo-container h1 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: bold;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Menu links */
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #1e747d;
+  background-color: #f1f1f1;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu a i {
+  color: #1a237e;
+  min-width: 20px;
+  font-size: 18px;
+}
+
+.menu a:hover {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.menu a:hover i {
+  color: white;
+}
+/*manu*/
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 90%; /* slightly narrower than full width for centering */
+  align-items: center;
+
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #397ab0;
+  padding: 20px 35px; /* more padding = bigger box */
+  border-radius: 10px;
+  font-size: 24px; /* larger text */
+  font-weight: 700;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  margin: 20px auto; /* spacing and centering */
+}
+
+
+/* === Submenu toggle styles === */
+
+/* Hide the checkbox toggle */
+.toggle-submenu {
+  display: none;
+}
+
+/* Style the label that toggles submenu */
+label[for="services-toggle"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  color: #1e747d;
+  padding: 12px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+label[for="services-toggle"]:hover {
+  background-color: #3f51b5;
+  color: white;
+}
+
+/* Arrow icon inside label */
+.arrow {
+  transition: transform 0.3s ease;
+  font-weight: bold;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* Rotate arrow when submenu is open */
+.toggle-submenu:checked + label .arrow {
+  transform: rotate(90deg);
+}
+
+/* Hide submenu by default */
+.submenu {
+  display: none;
+  list-style: none;
+  margin-left: 1.5rem;
+  padding-left: 0;
+  gap: 8px;
+}
+
+/* Show submenu when checkbox is checked */
+.toggle-submenu:checked + label + .submenu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style submenu links */
+.submenu li a {
+  background-color: #e0f2f1;
+  color: #004d40;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.submenu li a:hover {
+  background-color: #3f51b5;
+  color: white;
+}
+
+/*🛑 Other / Shared Components*/
+.no-load {
+  background-color: #ffe6e6;
+  padding: 15px;
+  border-radius: 10px;
+  color: #c0392b;
+}
+
+.trust-info {
+  text-align: center;
+}
+
+.trust-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.trust-stats div {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .left {
+    width: 100%;
+    position: relative;
+  }
+  .right {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+/*post css*/
+.post-btn {
+  display: block;
+  background-color: #397ab0;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 20px auto;
+  width: 90%;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.post-submenu {
+  position: absolute;
+  top: 60px;
+  left: 280px; /* next to sidebar */
+  background: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  z-index: 10;
+}
+
+.post-submenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-submenu li {
+  margin-bottom: 10px;
+}
+
+.post-submenu a {
+  text-decoration: none;
+  color: #314244;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}

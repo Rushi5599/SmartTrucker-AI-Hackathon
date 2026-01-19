@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Emergency Transport Request</title>
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="Custemer.css">
+</head>
+
+<body>
+
+    <div class="left"></div>
+
+    <div class="right">
+        <div class="emergency-container">
+
+            <h2>🚨 Emergency Transport Request</h2>
+            <p class="subtitle">
+                Fast AI-assisted transport for life-critical deliveries.
+            </p>
+
+            <!-- INPUT CARD -->
+            <div class="emergency-card">
+                <span class="priority-badge">🚑 HIGH PRIORITY</span>
+
+                <div class="form-group">
+                    <label>Emergency Load Type</label>
+                    <input id="loadType" placeholder="Medicine / Food / Medical Equipment">
+                </div>
+
+                <div class="form-group">
+                    <label>From Location</label>
+                    <input id="fromCity" placeholder="Hospital / Warehouse">
+                </div>
+
+                <div class="form-group">
+                    <label>To Location</label>
+                    <input id="toCity" placeholder="Hospital / Relief Center">
+                </div>
+
+                <button onclick="emergencyBooking()">Request Emergency Transport</button>
+            </div>
+
+            <!-- ETA -->
+            <div class="eta-box" id="etaBox" style="display:none;">
+                ⏱ Estimated Arrival Time: <b id="etaTime"></b>
+            </div>
+
+            <!-- DRIVER PROFILES -->
+            <div class="driver-box" id="driverBox" style="display:none;">
+                <h3>📍 Nearest Available Drivers</h3>
+                <div class="driver-cards" id="driverCards"></div>
+            </div>
+
+            <!-- AI RESPONSE -->
+            <div class="ai-box">
+                <h3>🤖 AI Emergency Explanation</h3>
+                <pre id="result">Fill details to get emergency support.</pre>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+    <script src="customer.js"></script>
+
+</body>
+
+</html>

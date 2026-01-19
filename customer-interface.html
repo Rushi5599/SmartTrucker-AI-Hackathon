@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Load Booking</title>
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="customer interface.css">
+</head>
+
+<body>
+
+    <div class="left"></div>
+
+    <div class="right">
+        <div class="customer-container">
+
+            <h2>🚛 Customer Load Booking</h2>
+            <p class="subtitle">
+                AI-powered truck recommendation and transportation demand forecast.
+            </p>
+
+            <!-- BOOKING FORM -->
+            <div class="booking-card">
+                <div class="form-group">
+                    <label>Load Type</label>
+                    <input id="loadType" placeholder="Medicine / Food / Furniture">
+                </div>
+
+                <div class="form-group">
+                    <label>Weight (tons)</label>
+                    <input id="weight" type="number" min="1">
+                </div>
+
+                <div class="form-group">
+                    <label>From City</label>
+                    <input id="fromCity" placeholder="Pune">
+                </div>
+
+                <div class="form-group">
+                    <label>To City</label>
+                    <input id="toCity" placeholder="Nanded">
+                </div>
+
+                <button onclick="getRecommendation()">Get AI Recommendation</button>
+            </div>
+
+            <!-- TRUCK RESULT -->
+            <div class="ai-box" id="aiBox" style="display:none;">
+                <h3>🤖 Recommended Trucks</h3>
+
+                <div class="truck-cards">
+                    <div class="truck-card best">
+                        <span class="badge">Best Choice</span>
+                        <h4 id="truck1"></h4>
+                        <p><b>Cost:</b> ₹<span id="cost1"></span></p>
+                        <p id="reason1"></p>
+                    </div>
+
+                    <div class="truck-card">
+                        <h4 id="truck2"></h4>
+                        <p><b>Cost:</b> ₹<span id="cost2"></span></p>
+                        <p id="reason2"></p>
+                    </div>
+
+                    <div class="truck-card">
+                        <h4 id="truck3"></h4>
+                        <p><b>Cost:</b> ₹<span id="cost3"></span></p>
+                        <p id="reason3"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DEMAND FORECAST -->
+            <div class="forecast-box" id="forecastBox" style="display:none;">
+                <h3>📈 Transportation Demand Forecast</h3>
+                <p><b>Route:</b> <span id="forecastRoute"></span></p>
+                <p><b>Demand Level:</b> <span id="forecastLevel"></span></p>
+                <p><b>Confidence:</b> <span id="forecastConfidence"></span></p>
+                <p><b>Expected Window:</b> 1–2 Days</p>
+                <p class="forecast-ai" id="forecastAI"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+    <script src="customer interface.js"></script>
+
+</body>
+
+</html>

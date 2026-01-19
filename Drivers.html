@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Emergency Page</title>
+    <link rel="stylesheet" href="driver emergency.css">
+    
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+     <div class="left">
+            <!-- Optional sidebar content -->
+        </div>
+    
+    
+        <!-- Left Sidebar (Blank Container) -->
+        
+        
+        <!-- Right Side Content -->
+        <div class="right">
+            <div class="container">
+                <div class="emergency-card">
+                    <div class="header">
+                        <h1>🚨Driver Emergency Assistance</h1>
+                        <p class="subtitle">Get immediate help for your vehicle</p>
+                    </div>
+
+                    <!-- Emergency Type Selection -->
+                    <div class="section" id="emergencyTypeSection">
+                        <h2>1. Select Emergency Type</h2>
+                        <div class="emergency-options">
+                            <div class="emergency-category">
+                                <h3>Vehicle Minor Emergency</h3>
+                                <div class="option-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="emergencyType" value="puncture">
+                                        <span class="radio-custom"></span>
+                                        <span class="option-text">Accident</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="emergencyType" value="breakdown">
+                                        <span class="radio-custom"></span>
+                                        <span class="option-text">Breakdown</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" id="nextToDetails" disabled>Next</button>
+                    </div>
+
+                    <!-- Accident Details Form -->
+                    <div class="section hidden" id="detailsSection">
+                        <h2>2. Accident Details</h2>
+                        <div class="form-group">
+                            <label for="destination">Destination/Location *</label>
+                            <input type="text" id="destination" placeholder="Enter your current location or destination" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="vehicleNumber">Vehicle Number *</label>
+                            <input type="text" id="vehicleNumber" placeholder="Enter vehicle registration number" required>
+                        </div>
+                        <div class="button-group">
+                            <button class="btn btn-secondary" id="backToType">Back</button>
+                            <button class="btn btn-primary" id="submitEmergency">Get Help</button>
+                        </div>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div class="section hidden" id="loadingSection">
+                        <div class="loader">
+                            <div class="spinner"></div>
+                            <p>Finding services and recommendations...</p>
+                            <p class="loading-hint">If this takes too long, using backup data...</p>
+                        </div>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div class="section hidden" id="resultsSection">
+                        <h2>3. Assistance Available</h2>
+                        <p class="results-intro">Based on your location and emergency type, here are all available services (10-20 recommendations):</p>
+                        
+                        <!-- Nearest Garage Profile Card (Featured) -->
+                        <div class="garage-profile-section">
+                            <h3 class="profile-title">⭐ Nearest Garage (Recommended)</h3>
+                            <div class="garage-profile-card" id="garageProfileCard">
+                                <div class="profile-header">
+                                    <div class="profile-icon">🔧</div>
+                                    <div class="profile-name" id="garageName">Loading...</div>
+                                </div>
+                                <div class="contact-section">
+                                    <div class="contact-item">
+                                        <span class="contact-label">📞 Contact:</span>
+                                        <a href="tel:" class="contact-number" id="garageNumber">-</a>
+                                    </div>
+                                </div>
+                                <div class="details-section">
+                                    <p class="details-title">Complete Details:</p>
+                                    <div class="details-content" id="garageDetails">-</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- All AI Recommendations Grid -->
+                        <div class="recommendations-header">
+                            <h3 class="recommendations-title">🤖 AI Recommended Services</h3>
+                            <p class="recommendations-subtitle">All available assistance options for your emergency</p>
+                        </div>
+                        <div class="recommendations-grid" id="recommendationsGrid">
+                            <!-- Recommendations will be dynamically added here -->
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-primary" id="newEmergency">Report Another Emergency</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <script src="menu.js"></script>
+    <script src="driver_emergency.js"></script>
+</body>
+</html>

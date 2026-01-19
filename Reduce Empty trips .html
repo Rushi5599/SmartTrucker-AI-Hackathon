@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Return Load Assistant</title>
+
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="Reduce Empty trips .css">
+</head>
+
+<body>
+
+  <div class="left"></div>
+
+  <div class="right">
+    <div class="decision-container">
+
+      <h2>🧠 Return Load Assistant</h2>
+      <p class="subtitle">
+        Smart return load suggestions to avoid empty trips and increase earnings.
+      </p>
+
+      <!-- INPUT -->
+      <div class="decision-card">
+        <div class="form-group">
+          <label>Delivery City</label>
+          <input id="location" placeholder="e.g. Pune">
+        </div>
+
+        <button onclick="getDecision()">Find Return Loads</button>
+      </div>
+
+      <!-- AI EXPLANATION -->
+      <div class="ai-box">
+        <h3>🤖 AI Explanation</h3>
+        <pre id="result">Enter city to get suggestions.</pre>
+      </div>
+
+      <!-- DYNAMIC RETURN LOADS -->
+      <div class="return-box" id="returnBox" style="display:none;">
+        <h3>📦 Predicted Return Loads</h3>
+        <div class="return-cards" id="returnCards"></div>
+
+        <div class="saving-box" id="savingBox"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="menu.js"></script>
+  <script src="reduce-empty.js"></script>
+
+</body>
+
+</html>
